@@ -16,5 +16,5 @@ RUN wget https://groups.csail.mit.edu/graphics/classes/6.837/F03/models/cow-nono
 RUN wget https://groups.csail.mit.edu/graphics/classes/6.837/F03/models/pumpkin_tall_10k.obj
 RUN wget https://groups.csail.mit.edu/graphics/classes/6.837/F03/models/teddy.obj
 
-ENTRYPOINT ["afl-fuzz", "-i", /fastObjCorpus", "-o", "/fastObjOut"]
+ENTRYPOINT ["afl-fuzz", "-i", "/fastObjCorpus", "-o", "/fastObjOut"]
 CMD ["/fuzz", "@@"]
