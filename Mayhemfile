@@ -1,12 +1,12 @@
- Mayhem by https://forallsecure.com
+# Mayhem by https://forallsecure.com
 # Mayhemfile: configuration file for testing your target with Mayhem
 # Format: YAML 1.1
 
 # Project name that the target belongs to
-project: fast_obj
+project: fast-obj
 
 # Target name (should be unique within the project)
-target: fast_obj
+target: fast-obj
 
 
 # Turns on extra test case processing (completing a run will take longer)
