@@ -4,8 +4,6 @@ RUN apt-get update
 RUN apt install -y build-essential wget git clang cmake  automake autotools-dev  libtool zlib1g zlib1g-dev libexif-dev \libjpeg-dev 
 RUN git clone  https://github.com/thisistherk/fast_obj.git
 WORKDIR /fast_obj
-RUN ./autogen.sh
-RUN CC=afl-clang ./configure
 RUN cmake -DCMAKE_C_COMPILER=afl-gcc -DCMAKE_CXX_COMPILER=afl-g++ .
 RUN make
 RUN afl-g++ -I. ./test/test.cpp -o /fuzz libfast_obj_lib.a
